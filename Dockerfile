@@ -5,7 +5,7 @@ MAINTAINER Kévin Buntrock
 RUN apk update && apk add \
     ca-certificates \
     git \
-	ssh \
+	openssh \
 	bash \
     maven \
     vim \
