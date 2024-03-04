@@ -1,4 +1,4 @@
-A docker image designed to build maven projects with jdk 8, 11 and 17.
+A docker image designed to build maven projects with jdk 8, 11, 17 and 21 (even if not in the name ... :p).
 
 Useful commands : 
 
