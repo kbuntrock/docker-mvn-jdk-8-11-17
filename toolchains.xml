@@ -31,4 +31,14 @@
       <jdkHome>/usr/lib/jvm/java-17-openjdk</jdkHome>
     </configuration>
   </toolchain>
+  <toolchain>
+    <type>jdk</type>
+    <provides>
+      <version>21</version>
+	  <id>21</id>
+    </provides>
+    <configuration>
+      <jdkHome>/usr/lib/jvm/java-21-openjdk</jdkHome>
+    </configuration>
+  </toolchain>
 </toolchains>
