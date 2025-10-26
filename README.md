@@ -2,7 +2,7 @@ A docker image designed to build maven projects with jdk 8, 11, 17 and 21 (even 
 
 Useful commands : 
 
-docker build -t maven-toolchain-jdk-8-11-17 .
+docker build --progress=plain --no-cache -t maven-toolchain-jdk-8-11-17 .
 
 docker save maven-toolchain-jdk-8-11-17:latest > maven-toolchain-jdk-8-11-17.docker
 
