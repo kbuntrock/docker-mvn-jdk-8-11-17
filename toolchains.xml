@@ -48,7 +48,7 @@
       <id>25</id>
     </provides>
     <configuration>
-      <jdkHome>/usr/lib/jvm/java-25-openjdk</jdkHome>
+      <jdkHome>/usr/lib/jvm/java-25-temurin</jdkHome>
     </configuration>
   </toolchain>
 </toolchains>
