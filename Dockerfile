@@ -43,6 +43,19 @@ ENV JAVA25_HOME=/usr/lib/jvm/java-25-temurin
 
 #RUN ls /usr/lib/jvm/java-25-temurin
 
+#RUN mvn --version
+# installed maven 3 in /usr/share/java/maven-3
+
+ENV MAVEN_4_VERSION=4.0.0-rc-5
+ENV MAVEN_4_URL=https://dlcdn.apache.org/maven/maven-4/${MAVEN_4_VERSION}/binaries/apache-maven-${MAVEN_4_VERSION}-bin.tar.gz
+RUN wget "$MAVEN_4_URL" && \
+    tar -xvzf apache-maven-${MAVEN_4_VERSION}-bin.tar.gz && \
+    mv apache-maven-${MAVEN_4_VERSION} /usr/share/java/maven-4 && \
+    rm -r apache-maven-${MAVEN_4_VERSION}-bin.tar.gz
+
+# installed maven 4 in /usr/share/java/maven-4
+# RUN /usr/share/java/maven-4/bin/mvn --version
+
 ENV GHR_VERSION=0.17.0
 ENV GHR_URL=https://github.com/tcnksm/ghr/releases/download/v${GHR_VERSION}/ghr_v${GHR_VERSION}_linux_amd64.tar.gz
 RUN wget "$GHR_URL" && \
@@ -52,3 +65,10 @@ RUN wget "$GHR_URL" && \
 
 # To check if ghr installation is ok
 #RUN ghr
+
+# How to switch from maven versions :
+# RUN mvn --version
+# RUN ln -sf /usr/share/java/maven-4/bin/mvn /usr/bin/mvn
+# RUN mvn --version
+# RUN ln -sf /usr/share/java/maven-3/bin/mvn /usr/bin/mvn
+# RUN mvn --version
